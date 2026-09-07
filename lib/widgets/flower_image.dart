@@ -11,7 +11,7 @@ class FlowerNetworkImage extends StatelessWidget {
     required this.imageURL,
     required this.fallbackIcon,
     required this.fallbackColor,
-    required this.fit,
+    this.fit = BoxFit.cover,
   });
 
   final String imageURL;
@@ -54,7 +54,7 @@ class FlowerNetworkImage extends StatelessWidget {
           color: fallbackColor,
           child: Icon(fallbackIcon, size: 48, color: fallbackColor),
         );
-      }, 
+      },
     );
   }
 }
